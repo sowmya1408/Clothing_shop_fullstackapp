@@ -1,0 +1,21 @@
+*{
+    list-style: none;
+}
+
+.product-image img{
+    height: 14em;
+    width: 15em,
+}
+
+.products_container{
+    border: 1px solid rgb(143, 137, 137);
+    width: 15%;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.products-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
