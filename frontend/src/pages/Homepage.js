@@ -6,11 +6,8 @@ import Main from '../components/Main';
 import React from 'react'
 
 const Homepage = () => {
-    return (
-        <div>
-           <Navbar/>
-           <Search/>
-           <Card/>
+return      (  <div>
+          This is home page
 
         </div>
     )

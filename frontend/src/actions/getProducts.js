@@ -1,21 +1,18 @@
 import { GET_PRODUCTS_DATA,OPEN_EACH_PRODUCT,ADD_PRODUCT_BASKET } from "./types";
 
-export const loadProducts = () => {
+export const getProducts = () => {
   return (dispatch) => {
     return fetch('http://localhost:8080/api/products')
       .then((res) => res.json())
       .then((data) => {
-        dispatch(getProducts(data));
+        dispatch({
+          type: GET_PRODUCTS_DATA,
+          products: data
+      });
       });
   };
 };
 
-export const getProducts = (products) => {
-    return {
-        type: GET_PRODUCTS_DATA,
-        products: products
-    }
-}
 
  
 

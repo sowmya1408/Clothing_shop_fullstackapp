@@ -1,18 +1,27 @@
-import { GET_PRODUCTS_DATA, OPEN_EACH_PRODUCT } from "../actions/types";
+import { GET_PRODUCTS_DATA, GET_CATEGORY_PRODUCTS,GET_PRODUCT_WITH_ID } from "../actions/types";
 
 const initialState =  {
-    productsData: []
+    productsData: [],
+    productCategoryData: []
 }
 export default (state = initialState, action) => {
     switch(action.type) {
         case GET_PRODUCTS_DATA:
             return {
+                ...state,
                 productsData: action.products
             }
-         case OPEN_EACH_PRODUCT:
-             return {
-                productsData: action.product
-             }   
+        case GET_CATEGORY_PRODUCTS:
+            return {
+                ...state,
+                productCategoryData: action.categoryProducts
+            }
+            case GET_PRODUCT_WITH_ID:
+                return {
+                    ...state,
+                    productsWithId: action.productsId
+
+                }    
         default:
             return state;
     }
