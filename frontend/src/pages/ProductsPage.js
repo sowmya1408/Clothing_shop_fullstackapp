@@ -1,14 +1,15 @@
 import React from 'react';
 import Card from '../components/Card';
+import Cart from '../components/Cart';
 
-const ProductsPage = ({products,name}) => {
+const ProductsPage = ({products,name,productCart }) => {
     let filterProducts;
     if(name.includes('men') || name.includes('women')){
         filterProducts = products.filter(product => product.gender === name)
-        return <div><Card productsData={filterProducts} /></div>;  
+        return <div><Cart items={productCart}/><Card productsData={filterProducts} /></div>;  
     } else {
         filterProducts = products;
-        return <div><Card productsData={filterProducts}/></div>;; 
+        return <div><Cart items={productCart}/><Card productsData={filterProducts} /></div>;; 
     }
     
 }

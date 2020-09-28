@@ -13,7 +13,7 @@ const ProductsCategoryContainer = ({getCategoryProducts, productState}) => {
 
     useEffect(() => {
         getCategoryProducts(CategorySlug, genderSlug);
-    }, [CategorySlug,getCategoryProducts]);
+    }, [CategorySlug,genderSlug,getCategoryProducts]);
   
     return <CategoryPage productCategory={productCategoryData}/>
   };

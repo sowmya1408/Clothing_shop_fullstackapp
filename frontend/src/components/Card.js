@@ -3,7 +3,6 @@ import "../App.css";
 import Fade from "react-reveal";
 import { Link } from "react-router-dom";
 import Category from "./Category";
-import Button from './Button';
 
 const Card = ({ productsData }) => {
   console.log(productsData);
@@ -20,10 +19,7 @@ const Card = ({ productsData }) => {
                   <img src={product.image} alt={product.name} />
                 </li>
                 <li>{product.brand.toUpperCase()}</li>
-                <li>{product.price}DKK</li>
-                <li>
-                  <Button text="Add to cart" type="button"/>
-                </li>
+                <li>{product.price} DKK</li>
               </ul>
               </Link>
             ))

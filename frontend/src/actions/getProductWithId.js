@@ -7,7 +7,8 @@ export const getProductId = (id) =>{
           const fetchIdProductJson = await  fetchIdProduct.json();
           dispatch({
             type: GET_PRODUCT_WITH_ID,
-            productsId: fetchIdProductJson
+            productsId: fetchIdProductJson,
+            cart: fetchIdProductJson
           });
         } catch (err) {
           console.log(err);

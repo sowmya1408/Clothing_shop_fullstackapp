@@ -2,7 +2,8 @@ import { GET_PRODUCTS_DATA, GET_CATEGORY_PRODUCTS,GET_PRODUCT_WITH_ID } from "..
 
 const initialState =  {
     productsData: [],
-    productCategoryData: []
+    productCategoryData: [],
+  
 }
 export default (state = initialState, action) => {
     switch(action.type) {
@@ -19,7 +20,7 @@ export default (state = initialState, action) => {
             case GET_PRODUCT_WITH_ID:
                 return {
                     ...state,
-                    productsWithId: action.productsId
+                    productsWithId: action.productsId,
 
                 }    
         default:

@@ -1,12 +1,11 @@
 import React from "react";
-import CardProducts from "./CartProducts";
+import CartDropDown from './CartDropDown'
 
-const Cart = () => {
+const Cart = ({items}) => {
   return (
     <div className="cart">
-      <ion-icon name="cart-outline"></ion-icon>
-      <span></span>
-      <CardProducts />
+      <ion-icon name="cart-outline" ></ion-icon>
+      <span>{items.length}</span>
     </div>
   );
 };

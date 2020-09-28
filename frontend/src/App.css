@@ -1,6 +1,8 @@
 *{
     list-style: none;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -11,7 +13,7 @@ html {
 
 body {
     height: 100vh;
-    margin: 0;
+    
 }
 
 .navbar ul{
@@ -40,17 +42,18 @@ h1 {
 .cart {
     font-size: 3rem;
     text-align: right;
-    margin: 0 30px 30px 40px;    
+    margin: 0 30px 30px 40px; 
+    position: relative;
+    
 }
 
 .cart a {
     color: rgb(87, 85, 85);
+    position: relative;
 
 }
 ul .product-image img{
-    height: auto;
     width: 100%;
-    object-fit: cover;
 }
 
 .products_container{
@@ -61,15 +64,46 @@ ul .product-image img{
     font-size: 1.8rem;
     color: rgb(51, 50, 50);
 }
+.carts_container {
+    box-shadow: 0 4px 8px 0 rgb(0, 0 , 0 ,0.2);
+    margin: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: rgb(51, 50, 50);
+    position: absolute;
+    z-index: 12;  
+    left: 850px; 
+    top: 80px;
+    width: 40%;
+
+}
+ul .cart-image img{
+    width: 60px;
+    height: 60px;
+}
+
+/* .carts_container{
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgb(0, 0 , 0 ,0.2);
+    max-width: 20%;
+    margin: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: rgb(51, 50, 50);
+} */
 
 .productLink {
     display: flex;
 }
 
 .products-wrapper {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.carts-wrapper {
+    display: flex;
     justify-content: space-evenly;
 }
 
@@ -106,4 +140,31 @@ ul .product-image img{
 .productone {
     font-size: 2rem;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+
+button {
+    background: rgb(255, 174, 0);
+    padding: 10px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+button a {
+    color: rgb(51, 50, 50);
+}
+
+.cartpage-container{
+    font-size: 20px;
+    margin-top: 30px; 
+}
+
+.orderPage-container{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
